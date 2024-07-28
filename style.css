@@ -1,0 +1,115 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+/* common css */
+button {
+  padding: 10px 30px;
+  background-color: teal;
+  color: rgb(246, 249, 255);
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.4s all;
+}
+button:hover {
+  background-color: rgb(246, 249, 255);
+  color: teal;
+  border: 1px solid teal;
+}
+/* main container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgb(215, 188, 188), rgb(137, 236, 221));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* quiz container */
+.quiz-container {
+  background-color: aliceblue;
+  padding: 20px;
+  max-width: 450px;
+  width: 95%;
+  margin: auto;
+  height: fit-content;
+  box-shadow: 2px 5px 10px rgb(162, 232, 228);
+}
+/* start quiz*/
+.start-quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.start-quiz h2 {
+  color: teal;
+}
+/* start question */
+.question-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 25px;
+  height: 100%;
+  padding: 0px 10px;
+}
+.question-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.question-options label {
+  border: 1px solid teal;
+  padding: 5px;
+  width: 100%;
+  transition: 0.3s all;
+  color: teal;
+  font-size: 17px;
+  cursor: pointer;
+}
+.question-options label input[type="radio"] {
+  display: none;
+}
+.question-options label p {
+  padding: 7px;
+}
+.question-options label:hover,
+.question-options label input[type="radio"]:checked + p {
+  border: 1px solid teal;
+  background-color: teal;
+  color: rgb(246, 249, 255);
+}
+.question-options label .correct {
+  color: rgb(239, 245, 239);
+  background-color: rgb(3, 107, 3);
+}
+.question-options label .wrong {
+  color: rgb(239, 245, 239);
+  background-color: rgb(217, 55, 34);
+}
+.question-container button {
+  margin-left: auto;
+}
+/* end quiz */
+.end-quiz {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: teal;
+  min-height: 100%;
+}
+.end-quiz h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
